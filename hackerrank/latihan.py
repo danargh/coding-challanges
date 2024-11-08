@@ -1,0 +1,2 @@
+student = dict()
+print(student)
