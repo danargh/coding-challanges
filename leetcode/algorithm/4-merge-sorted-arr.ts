@@ -7,6 +7,7 @@ function merge(nums1: number[], m: number, nums2: number[], n: number): void {
       nums1.push(nums2[i]);
    }
 
+   // sort algorithm
    for (let j = 1; j < len; j++) {
       if (nums1[j - 1] || nums1[j - 1] === 0) {
          if (nums1[j] < nums1[j - 1]) {
