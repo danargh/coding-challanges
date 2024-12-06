@@ -16,24 +16,26 @@ function majorityElement(nums: number[]): any {
    return maxElement;
 }
 
-console.log(majorityElement([2, 2, 1, 1, 1, 2, 2]));
+console.log(majorityElement2([2, 2, 1, 1, 1, 2, 2]));
 
 // best practices 0 ms runtime
-// let count = 1;
-// let candidate = nums[0];
 
-// for (let i = 1; i < nums.length; ++i) {
-//    if (count === 0) {
-//       ++count;
-//       candidate = nums[i];
-//       continue;
-//    }
+function majorityElement2(nums: number[]): any {
+   let count = 1;
+   let candidate = nums[0];
+   for (let i = 1; i < nums.length; ++i) {
+      if (count === 0) {
+         ++count;
+         candidate = nums[i];
+         continue;
+      }
 
-//    if (candidate === nums[i]) {
-//       ++count;
-//    } else {
-//       --count;
-//    }
-// }
+      if (candidate === nums[i]) {
+         ++count;
+      } else {
+         --count;
+      }
+   }
 
-// return candidate;
+   return candidate;
+}
